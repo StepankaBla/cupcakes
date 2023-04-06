@@ -13,8 +13,20 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import logo from "./img/logo.png";
+import { Link } from "react-router-dom";
 
-const pages = ["Custom", "About us", "Contact"];
+const pages = [
+  <Link to="/" className="link">
+    home
+  </Link>,
+  <Link to="/about" className="link">
+    about
+  </Link>,
+  <Link to="/contact" className="link">
+    contact
+  </Link>,
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
@@ -37,7 +49,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" style={{ background: '#FF00F4' }}>
+    <AppBar position="static" style={{ background: "#d7aeb1" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -52,11 +64,11 @@ const Navbar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "pink",
+              color: "black",
               textDecoration: "none",
             }}
           >
-           ŠOE Cupcakes
+            SusikCups
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -66,7 +78,7 @@ const Navbar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="black"
             >
               <MenuIcon />
             </IconButton>
@@ -88,9 +100,12 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
+              <Link to="/">home</Link>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" color="black">
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -129,7 +144,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={logo} />
               </IconButton>
             </Tooltip>
             <Menu

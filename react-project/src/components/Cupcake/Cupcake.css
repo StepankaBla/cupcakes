@@ -1,10 +1,16 @@
+
 h1 {
   margin-top: 4rem;
   text-align: center;
   color: #b4acab;
   padding-top: 6rem;
+  
 }
-
+.cont{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 7rem;
+}
 .test {
   height: 800px;
   width: 100%;
@@ -12,7 +18,7 @@ h1 {
 .pics {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+
   justify-content: center;
   gap: 3rem;
   padding: 1rem;
@@ -33,7 +39,14 @@ h1 {
 }
 .imgs2 {
   position: absolute;
-  top: 58%;
+  top: 56%;
+  left: 50.2%;
+  transform: translate(-50%, -50%);
+}
+.imgs3 {
+  position: absolute;
+  z-index: -3;
+  top: 53%;
   left: 50.2%;
   transform: translate(-50%, -50%);
 }
