@@ -26,6 +26,9 @@ const pages = [
   <Link to="/contact" className="link">
     kuchtíci
   </Link>,
+   <Link to="/recipe" className="link">
+   recepty
+ </Link>,
 ];
 
 const Navbar = () => {
