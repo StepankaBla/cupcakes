@@ -39,9 +39,9 @@ const Footer = () => {
     </MDBContainer>
 
     <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-      © 2023 Copyright:
+      © 2023 
       <a className='text-white' href='https://mdbootstrap.com/'>
-        Susikcups.com
+        <br></br>Susikcups.com
       </a>
     </div>
   </MDBFooter>

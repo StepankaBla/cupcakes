@@ -1,19 +1,31 @@
-
+span{
+  position: absolute;
+  left: 70%;
+  top: 50%;
+ font-weight: 800;
+}
+ .left{
+  position: absolute;
+  left: 30%;
+  top: 50%;
+}
 h1 {
-  margin-top: 4rem;
+  margin-top: 2rem;
   text-align: center;
   color: #b4acab;
-  padding-top: 6rem;
+  padding-top: 3rem;
   
 }
 .cont{
   width: 50%;
   margin: auto;
   margin-bottom: 7rem;
+
 }
 .test {
   height: 800px;
   width: 100%;
+  
 }
 .pics {
   display: flex;
@@ -22,6 +34,7 @@ h1 {
   justify-content: center;
   gap: 3rem;
   padding: 1rem;
+  margin-top: 2rem;
   margin: auto;
   height: auto;
   width: 30%;
@@ -45,7 +58,6 @@ h1 {
 }
 .imgs3 {
   position: absolute;
-  z-index: -3;
   top: 53%;
   left: 50.2%;
   transform: translate(-50%, -50%);

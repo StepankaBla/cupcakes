@@ -18,16 +18,15 @@ import { Link } from "react-router-dom";
 
 const pages = [
   <Link to="/" className="link">
-    home
+    vytvoř si susikcup
   </Link>,
   <Link to="/about" className="link">
-    about
+    o nás
   </Link>,
   <Link to="/contact" className="link">
-    contact
+    kuchtíci
   </Link>,
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -100,7 +99,6 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <Link to="/">home</Link>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" color="black">
@@ -123,52 +121,29 @@ const Navbar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "pink",
+              color: "black",
               textDecoration: "none",
             }}
           >
-            LOGO
+            SusikCups
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "red", display: "block" }}
               >
                 {page}
-              </Button>
-            ))}
+              </Button>))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <Tooltip title="Kuchtík Vojta">
+              <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src={logo} />
               </IconButton>
             </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

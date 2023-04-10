@@ -10,7 +10,7 @@ import Img7 from "./img/ic2.png";
 import Img8 from "./img/ic3.png";
 import Img9 from "./img/sp1.png";
 import Img10 from "./img/sp2.png";
-import { Player } from 'video-react';
+import Img11 from "./img/sp3.png";
 
 import "./Cupcake.css";
 import Carousel from "react-bootstrap/Carousel";
@@ -20,34 +20,34 @@ const Cupcake = () => {
     {
       id: 1,
       imgSrc: Img3,
-      name: "Strawberry",
+      name: "Jahooda",
     },
     {
       id: 2,
       imgSrc: Img4,
-      name: "Chocolate",
+      name: "Čokoláda",
     },
     {
       id: 3,
       imgSrc: Img5,
-      name: "Vanilla",
+      name: "Vanilka",
     },
   ];
   let data2 = [
     {
       id: 4,
       imgSrc: Img6,
-      name: "Blue",
+      name: "Modrá",
     },
     {
       id: 5,
       imgSrc: Img7,
-      name: "Green",
+      name: "Zelená",
     },
     {
       id: 6,
       imgSrc: Img8,
-      name: "Yellow",
+      name: "Žlutá",
     },
   ];
 
@@ -55,12 +55,17 @@ const Cupcake = () => {
     {
       id: 7,
       imgSrc: Img9,
-      name: "Strawberry",
+      name: "Jahůdka",
     },
     {
       id: 8,
       imgSrc: Img10,
-      name: "Chocolate",
+      name: "Čokoládka",
+    },
+    {
+      id: 9,
+      imgSrc: Img11,
+      name: "Borůvky",
     },
   ];
   const [model, setModel] = useState(false);
@@ -82,115 +87,120 @@ const Cupcake = () => {
     setModel(true);
   };
   return (
-    <div className="cont">
-      <Carousel variant="dark" interval={null}>
-        <Carousel.Item prevLabel={null}>
-          <div className="test">
-            <h1>CHOOSE THE FLAVOR</h1>
-            <div className="imgs">
-              {" "}
-              <img src={Img2} height="195px" />
-            </div>
+    <div className="all">
+      <div className="cont">
+     <span>DALŠÍ</span>
+     <span className="left">ZPĚT</span>
+        <Carousel variant="dark" interval={null} >
 
-            {data.map((item, index) => {
-              return (
-                <div
-                  className="pics"
-                  key={index}
-                  onClick={() => getImg(item.imgSrc)}
-                >
-                  <Button variant="light" className="button">
-                    {item.name}
-                  </Button>
+          <Carousel.Item >
+            <div className="test">
+              <h1>VYBER SI PŘÍCHUŤ</h1>
+              <div className="imgs">
+                {" "}
+                <img src={Img2} height="195px" />
+              </div>
+
+              {data.map((item, index) => {
+                return (
+                  <div
+                    className="pics"
+                    key={index}
+                    onClick={() => getImg(item.imgSrc)}
+                  >
+                    <Button variant="light" className="button">
+                      {item.name}
+                    </Button>
+                  </div>
+                );
+              })}
+              <div className="imgs">
+                <div className={model ? "model open" : "model"}>
+                  <img src={tempingSrc} height="200px" />
                 </div>
-              );
-            })}
-            <div className="imgs">
-              <div className={model ? "model open" : "model"}>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          <Carousel.Item >
+            <div className="test">
+              {" "}
+              <h1>VYBER SI POLEVU</h1>
+              {data2.map((item, index) => {
+                return (
+                  <div
+                    className="pics"
+                    key={index}
+                    onClick={() => getImg2(item.imgSrc)}
+                  >
+                    <Button variant="light" className="button">
+                      {item.name}
+                    </Button>
+                  </div>
+                );
+              })}
+              <div className="imgs">
                 <img src={tempingSrc} height="200px" />
               </div>
-            </div>
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="test">
-            {" "}
-            <h1>CHOOSE THE ICING</h1>
-            {data2.map((item, index) => {
-              return (
-                <div
-                  className="pics"
-                  key={index}
-                  onClick={() => getImg2(item.imgSrc)}
-                >
-                  <Button variant="light" className="button">
-                    {item.name}
-                  </Button>
+              <div className="imgs2">
+                <div className={model ? "model open" : "model"}>
+                  <img src={tempingSrc2} height="200px" />
                 </div>
-              );
-            })}
-            <div className="imgs">
-              <img src={tempingSrc} height="200px" />
+              </div>
             </div>
-            <div className="imgs2">
-              <div className={model ? "model open" : "model"}>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <div className="test">
+              {" "}
+              <h1>VYBER SI POSYPEK</h1>
+              {data3.map((item, index) => {
+                return (
+                  <div
+                    className="pics"
+                    key={index}
+                    onClick={() => getImg3(item.imgSrc)}
+                  >
+                    <Button variant="light" className="button">
+                      {item.name}
+                    </Button>
+                  </div>
+                );
+              })}
+              <div className="imgs">
+                <img src={tempingSrc} height="200px" />
+              </div>
+              <div className="imgs2">
                 <img src={tempingSrc2} height="200px" />
               </div>
-            </div>
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="test">
-            {" "}
-            <h1>CHOOSE THE SPRINKLES</h1>
-            {data3.map((item, index) => {
-              return (
-                <div
-                  className="pics"
-                  key={index}
-                  onClick={() => getImg3(item.imgSrc)}
-                >
-                  <Button variant="light" className="button">
-                    {item.name}
-                  </Button>
+              <div className="imgs3">
+                <div className={model ? "model open" : "model"}>
+                  <img src={tempingSrc3} height="190px" />
                 </div>
-              );
-            })}
-            <div className="imgs">
-              <img src={tempingSrc} height="200px" />
-            </div>
-            <div className="imgs2">
-              <img src={tempingSrc2} height="200px" />
-            </div>
-            <div className="imgs3">
-              <div className={model ? "model open" : "model"}>
-                <img src={tempingSrc3} height="190px" />
               </div>
             </div>
-          </div>
-        </Carousel.Item>
+          </Carousel.Item>
 
-        <Carousel.Item>
-          <div className="test">
-          <h1>THIS IS YOUR SUSIKCUP!</h1>
-            <div className="imgs">
-              <img src={tempingSrc} height="200px" />
-            </div>
-            <div className="imgs2">
-              <img src={tempingSrc2} height="200px" />
-            </div>
-            <div className="imgs3">
-              <div className={model ? "model open" : "model"}>
-                <img src={tempingSrc3} height="190px" />
+          <Carousel.Item>
+            <div className="test">
+              <h1>TOHLE JE TVŮJ SUSIKCUP!</h1>
+              <div className="imgs">
+                <img src={tempingSrc} height="200px" />
+              </div>
+              <div className="imgs2">
+                <img src={tempingSrc2} height="200px" />
+              </div>
+              <div className="imgs3">
+                <div className={model ? "model open" : "model"}>
+                  <img src={tempingSrc3} height="190px" />
+                </div>
               </div>
             </div>
-          </div>
-        </Carousel.Item>
-      </Carousel>
+          </Carousel.Item>
+        </Carousel>
+      </div>
+      
     </div>
   );
 };
-
 export default Cupcake;
