@@ -27,9 +27,9 @@ function Recipe() {
       </div>
       <div>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={cbc} height={250} />
+          <Card.Img variant="top" src={cbc} height={350} />
           <Card.Body>
-            <Card.Title>Čokoládový cupcake</Card.Title>
+            <Card.Title style={{color: '#d7aeb1'}}>Čokoládový cupcake</Card.Title>
             <Card.Text>
             Pro kuchtíka Vojtu je čokoládový muffin jako zakázaný ovocný strom - nedosáhne na něj kvůli jeho tmavé barvě!
             </Card.Text>
@@ -41,15 +41,14 @@ function Recipe() {
       </div>
       <div></div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={vbc} height={300} />
+        <Card.Img variant="top" src={vbc} height={250} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title style={{color: '#d7aeb1'}}>Vanilkový cupcake</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          Vanilkový cupcake je jako Ondrova kuchyně - nadýchaný, jemný a vždy dokonale připravený!
           </Card.Text>
           <Button variant="primary" style={{backgroundColor: '#d7aeb1'}}>
-              <Link to="/vanilla" className="plink">sds</Link>
+              <Link to="/vanilla" className="plink">Recept</Link>
             </Button>
         </Card.Body>
       </Card>
