@@ -32,7 +32,7 @@ const Footer = () => {
           <MDBIcon fab icon='linkedin-in' />
         </MDBBtn>
 
-        <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+        <MDBBtn outline color="light" floating className='m-1' href='https://github.com/StepankaBla/cupcakes!' role='button'>
           <MDBIcon fab icon='github' />
         </MDBBtn>
       </section>
