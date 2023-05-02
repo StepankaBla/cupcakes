@@ -8,6 +8,7 @@ import Recipe from "./components/Recipe/Recipe";
 import Strawberry from "./components/Strawberry/Strawberry";
 import Chocolate from "./components/Chocolate/Chocolate";
 import Vanilla from "./components/Vanilla/Vanilla";
+import Clicker from "./components/Clicker/Clicker";
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/vanilla",
         element: <Vanilla />,
+      },
+      {
+        path: "/clicker",
+        element: <Clicker />,
       },
 
 

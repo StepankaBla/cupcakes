@@ -29,6 +29,9 @@ const pages = [
    <Link to="/recipe" className="link">
    recepty
  </Link>,
+ <Link to="/clicker" className="link">
+  Susí Clicker
+</Link>,
 ];
 
 const Navbar = () => {
