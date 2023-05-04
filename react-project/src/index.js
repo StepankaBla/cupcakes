@@ -5,14 +5,28 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Clicker from './components/Clicker/Clicker';
+import { Provider } from 'react-redux';
+import {configureStore} from "@reduxjs/toolkit";
+import { counterReducer } from './components/Clicker/counterReducer';
 
+const store = configureStore ({
+reducer: {
+  counter: counterReducer
+}
 
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </Provider>
+ 
+
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function

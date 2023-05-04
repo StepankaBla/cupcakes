@@ -5,9 +5,8 @@ return{
 
 }
 
-export function Decrement() {
-    return{ 
-        type: "DECREMENT"
-     }
-    
+export function Reset() {
+    return {
+        type: "RESET"
     }
+}
