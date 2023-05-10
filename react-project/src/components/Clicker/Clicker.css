@@ -1,0 +1,62 @@
+
+@keyframes float {
+    0% {
+        transform: translate3d(10px, 0, 0) rotate(0deg);
+      }
+      50% {
+        transform: translate3d(-10px, 0, 0) rotate(-5deg);
+      }
+      100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+      }
+    }
+ 
+
+.clicker {
+    
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.increment {
+    /*max-width: 25%;*/
+    max-height: 75%;
+    padding: 25px;
+   /* margin-left: 37%;*/
+    height: auto;
+    
+    animation: float 0.5s ease-in-out infinite alternate;
+}
+/*.posranek{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}*/
+  
+button{
+    align-self: center;
+    
+}
+ .reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    align-content: center;
+ }
+ @media screen and (max-width: 645px){
+  .App {
+    width: fit-content;
+    height: 100%;
+    
+  }
+ }
+ @media screen and (max-width: 425px){
+  .App{
+    height: fit-content;
+    height: 196vh;
+  }
+ }
