@@ -47,7 +47,7 @@ button{
   
     align-content: center;
  }
- @media screen and (max-width: 645px){
+/* @media screen and (max-width: 645px){
   .App {
     width: fit-content;
     height: 100%;
@@ -59,4 +59,4 @@ button{
     height: fit-content;
     height: 196vh;
   }
- }
+ }*/
