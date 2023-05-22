@@ -146,7 +146,7 @@ const Navbar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Kuchtík Vojta">
-              <IconButton sx={{ p: 0 }}>
+              <IconButton sx={{ p: 0, display: { xs: "none", md: "flex" }}}>
                 <Avatar alt="Remy Sharp" src={logo} />
               </IconButton>
             </Tooltip>

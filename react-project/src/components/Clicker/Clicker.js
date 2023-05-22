@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
 import { Increment, Reset } from "./counterAction";
 import "./Clicker.css";
-import hnusak from "./img/susak_hnusak.jpg";
+import hnusak from "./img/susak_hnusak.png";
 import Button from "react-bootstrap/esm/Button";
 
 const Clicker = () => {
@@ -11,7 +11,7 @@ const Clicker = () => {
   const counter = useSelector((state) => state.counter);
 
   return (
-    <div className="App">
+    <div className="all">
       <div className="clicker">
         <div className="posranek">
         <h1>ZAHRAJ SI SUSÍ CLICKER NYNÍ!</h1>
