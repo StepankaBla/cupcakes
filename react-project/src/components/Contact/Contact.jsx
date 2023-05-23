@@ -3,29 +3,70 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./Contact.css";
 import stepa from "./img/stepa.png";
 import ondra from "./img/ondra.png";
 import elis from "./img/elis.jpg";
-
-import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
+import { Modal, Button, Image, Text, Link } from "@nextui-org/react";
 
 const Contact = () => {
+  const [visible, setVisible] = React.useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
   return (
     <p>
+       
+      <Modal noPadding open={visible} onClose={closeHandler}>
+        <Modal.Header
+          css={{ position: "absolute", zIndex: "$1", top: 5, right: 8 }}
+        >
+          <Text color="#363449">
+            Photo by{" "}
+            <Link
+              color
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://unsplash.com/@anniespratt"
+            >
+              Annie Spratt
+            </Link>{" "}
+            on{" "}
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://unsplash.com/s/visual/ef7937f3-0d44-43eb-b992-28050748f999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >
+              Unsplash
+            </Link>
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Image
+            showSkeleton
+            src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            width={400}
+            height={490}
+          />
+        </Modal.Body>
+      </Modal>
       <h1>NAŠI KUCHTÍCI</h1>
       <div className="content">
-        <div>
+        <div >
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
               alt="green iguana"
               height="250"
               image={ondra}
+              
             />
+             <Button onPress={handler}>
+  ZJISTI VÍC!
+      </Button>
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Kuchtík Ondřej Habrda
