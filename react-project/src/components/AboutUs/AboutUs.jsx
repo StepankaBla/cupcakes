@@ -2,6 +2,8 @@ import React from "react";
 import "./AboutUs.css";
 import logo from "./img/logo.png";
 import Img4 from "./img/muf2.png";
+import zeme from "./img/zeme.png";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
@@ -27,10 +29,19 @@ const AboutUs = () => {
               kde si získává uznání svým výjimečným kulinářským uměním.
             </p>
           </div>
-          <div className="descPic">
-            <div data-aos="fade-left" className="content_box_left_pic">
+          <div className="">
+            <motion.div
+              style={{
+                borderRadius: 30,
+                backgroundColor: "#fff",
+              }}
+              animate={{ rotate: 360 }}
+              transition={{ ease: "linear", duration: 2, repeat: Infinity }}
+              data-aos="fade-left"
+              className="content_box_left_pic"
+            >
               <img src={logo} alt="" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -61,9 +72,16 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="descPic">
-            <div data-aos="fade-left" className="content_box_left_pic">
+            <motion.div
+              data-aos="fade-left"
+              className="content_box_left_pic"
+              style={{
+                borderRadius: 30,
+              }}
+              whileHover={{ scale: 1.2 }}
+            >
               <img src={Img4} alt="" height="200px" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

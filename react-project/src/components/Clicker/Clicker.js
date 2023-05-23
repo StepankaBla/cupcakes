@@ -14,7 +14,7 @@ const Clicker = () => {
     <div className="all">
       <div className="clicker">
         <div className="posranek">
-        <h1>ZAHRAJ SI SUSÍ CLICKER NYNÍ!</h1>
+        <h1 className="nadpis">ZAHRAJ SI SUSÍ CLICKER NYNÍ!</h1>
         <img
           className="increment"
           src={hnusak}

@@ -26,12 +26,12 @@ const pages = [
   <Link to="/contact" className="link">
     kuchtíci
   </Link>,
-   <Link to="/recipe" className="link">
-   recepty
- </Link>,
- <Link to="/clicker" className="link">
-  Susí Clicker
-</Link>,
+  <Link to="/recipe" className="link">
+    recepty
+  </Link>,
+  <Link to="/clicker" className="link">
+    susíClicker
+  </Link>,
 ];
 
 const Navbar = () => {
@@ -141,12 +141,13 @@ const Navbar = () => {
                 sx={{ my: 2, color: "red", display: "block" }}
               >
                 {page}
-              </Button>))}
+              </Button>
+            ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Kuchtík Vojta">
-              <IconButton sx={{ p: 0, display: { xs: "none", md: "flex" }}}>
+              <IconButton sx={{ p: 0, display: { xs: "none", md: "flex" } }}>
                 <Avatar alt="Remy Sharp" src={logo} />
               </IconButton>
             </Tooltip>

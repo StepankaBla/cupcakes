@@ -11,7 +11,7 @@ import {Link} from "react-router-dom";
 function Recipe() {
   return (
     <div className="card" height={3000}>
-      <div>
+      <div className="bckRec">
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={sbc} height={250} />
           <Card.Body>
@@ -25,7 +25,7 @@ function Recipe() {
           </Card.Body>
         </Card>
       </div>
-      <div>
+      <div className="bckRec">
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={cbc} height={350} />
           <Card.Body>
@@ -39,19 +39,20 @@ function Recipe() {
           </Card.Body>
         </Card>
       </div>
-      <div></div>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={vbc} height={250} />
-        <Card.Body>
-          <Card.Title style={{color: '#d7aeb1'}}>Vanilkový cupcake</Card.Title>
-          <Card.Text>
-          Vanilkový cupcake je jako Ondrova kuchyně - nadýchaný, jemný a vždy dokonale připravený!
-          </Card.Text>
-          <Button variant="primary" style={{backgroundColor: '#d7aeb1'}}>
-              <Link to="/vanilla" className="plink">Recept</Link>
+      <div className="bckRec">
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={vbc} height={280} />
+          <Card.Body>
+            <Card.Title style={{color: '#d7aeb1'}}>Vanilkový cupcake</Card.Title>
+            <Card.Text>
+            Vanilkový cupcake je jako Ondrova kuchyně - nadýchaný, jemný a vždy dokonale připravený!
+            </Card.Text>
+            <Button variant="primary" style={{backgroundColor: '#d7aeb1'}}>
+              <Link to="/chocolate" className="plink">Recept</Link>
             </Button>
-        </Card.Body>
-      </Card>
+          </Card.Body>
+        </Card>
+      </div>
     </div>
   );
 }
