@@ -2,7 +2,6 @@ import React from "react";
 import "./AboutUs.css";
 import logo from "./img/logo.png";
 import Img4 from "./img/muf2.png";
-import zeme from "./img/zeme.png";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {
@@ -33,10 +32,9 @@ const AboutUs = () => {
             <motion.div
               style={{
                 borderRadius: 30,
-                backgroundColor: "#fff",
               }}
               animate={{ rotate: 360 }}
-              transition={{ ease: "linear", duration: 2, repeat: Infinity }}
+              transition={{ ease: "linear", duration:  6,repeat: Infinity }}
               data-aos="fade-left"
               className="content_box_left_pic"
             >

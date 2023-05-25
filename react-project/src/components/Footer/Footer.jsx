@@ -21,18 +21,18 @@ const Footer = () => {
           <MDBIcon fab icon='twitter' />
         </MDBBtn>
 
-        <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+        <MDBBtn outline color="light" floating className='m-1' href='http://localhost:3000/' role='button'>
           <MDBIcon fab icon='google' />
         </MDBBtn>
-        <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+        <MDBBtn outline color="light" floating className='m-1' href='https://www.instagram.com/stepanka_bla/' role='button'>
           <MDBIcon fab icon='instagram' />
         </MDBBtn>
 
-        <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+        <MDBBtn outline color="light" floating className='m-1' href='https://cz.linkedin.com/in/%C5%A1t%C4%9Bp%C3%A1nka-bla%C5%BEkov%C3%A1-3b9733262?trk=people-guest_people_search-card' role='button'>
           <MDBIcon fab icon='linkedin-in' />
         </MDBBtn>
 
-        <MDBBtn outline color="light" floating className='m-1' href='https://github.com/StepankaBla/cupcakes!' role='button'>
+        <MDBBtn outline color="light" floating className='m-1' href='https://github.com/StepankaBla/cupcakes' role='button'>
           <MDBIcon fab icon='github' />
         </MDBBtn>
       </section>
