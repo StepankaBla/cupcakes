@@ -43,6 +43,7 @@ h1 {
 .button {
   flex: 0 0 calc(25% - 20px);
   max-width: 0 0 calc(25% - 20px);
+ white-space: nowrap;
 }
 .imgs {
   position: absolute;

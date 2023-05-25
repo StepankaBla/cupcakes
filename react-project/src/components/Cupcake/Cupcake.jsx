@@ -20,7 +20,7 @@ const Cupcake = () => {
     {
       id: 1,
       imgSrc: Img3,
-      name: "RedVelvet",
+      name: "Red Velvet",
     },
     {
       id: 2,
