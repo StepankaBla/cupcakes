@@ -8,7 +8,7 @@ import "./Contact.css";
 import stepa from "./img/stepa.png";
 import ondra from "./img/ondra.png";
 import elis from "./img/elis.jpg";
-import { Modal, Button, Image, Text, Link } from "@nextui-org/react";
+import { Progress, Grid } from "@nextui-org/react";
 
 const Contact = () => {
   const [visible, setVisible] = React.useState(false);
@@ -19,42 +19,11 @@ const Contact = () => {
   };
   return (
     <p>
-       
-      <Modal noPadding open={visible} onClose={closeHandler}>
-        <Modal.Header
-          css={{ position: "absolute", zIndex: "$1", top: 5, right: 8 }}
-        >
-          <Text color="#363449">
-            Photo by{" "}
-            <Link
-              color
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://unsplash.com/@anniespratt"
-            >
-              Annie Spratt
-            </Link>{" "}
-            on{" "}
-            <Link
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://unsplash.com/s/visual/ef7937f3-0d44-43eb-b992-28050748f999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-            >
-              Unsplash
-            </Link>
-          </Text>
-        </Modal.Header>
-        <Modal.Body>
-          <Image
-            showSkeleton
-            src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-            width={400}
-            height={490}
-          />
-        </Modal.Body>
-      </Modal>
       <h1>NAŠI KUCHTÍCI</h1>
+
       <div className="content">
+
+
         <div >
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
@@ -62,11 +31,10 @@ const Contact = () => {
               alt="green iguana"
               height="250"
               image={ondra}
-              
+
             />
-             <Button onPress={handler}>
-  ZJISTI VÍC!
-      </Button>
+
+
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Kuchtík Ondřej Habrda
@@ -78,13 +46,31 @@ const Contact = () => {
                 konflikt spojený s ostrými verbálními výpady a výzvami na
                 sociálních sítích, což způsobuje sledování fanoušky a
                 veřejností.
+
               </Typography>
+
             </CardContent>
-            <CardActions>
-              <Typography></Typography>
-            </CardActions>
+            <h5 className="urovne">Úroveň pečení: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={15} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
+            <h5 className="urovne">Vztah se Susičkem: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={30} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
+            <h5 className="urovne">Slušivost v zástěře: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={92} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
           </Card>
         </div>
+
         <div>
           <Card sx={{ maxWidth: 345 }}>
             <CardMedia
@@ -105,6 +91,24 @@ const Contact = () => {
                 společné kulinářské projekty.
               </Typography>
             </CardContent>
+            <h5 className="urovne">Úroveň pečení: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={80} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
+            <h5 className="urovne">Vztah se Susičkem: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={0} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
+            <h5 className="urovne">Slušivost v zástěře: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={30} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
             <CardActions>
               <Typography></Typography>
             </CardActions>
@@ -131,9 +135,27 @@ const Contact = () => {
                 Susíkem jsou jedinečné a zaujmou každého, kdo je ochutná.
               </Typography>
             </CardContent>
+            <h5 className="urovne">Úroveň pečení: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={40} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
+            <h5 className="urovne">Vztah se Susičkem: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={90} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
+            <h5 className="urovne">Slušivost v zástěře: </h5>
+            <Grid>
+              <div className="zkouska">
+                <Progress value={60} shadow color="error" status="error" NormalSizes='xl' />
+              </div>
+            </Grid>
             <CardActions>
               <Typography>
-     
+
               </Typography>
             </CardActions>
           </Card>

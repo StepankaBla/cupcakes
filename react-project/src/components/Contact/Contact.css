@@ -6,6 +6,21 @@
   width: 50%;
   margin: 3rem auto;
 }
+.zkouska{
+  width: 70%;
+  display: flex;
+  margin-left: 13%;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.urovne{
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
 @media screen and (max-width: 1300px) {
   .content {
     width: 80%;
