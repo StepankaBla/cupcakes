@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
-import { Increment, Reset } from "./counterAction";
+import { Increment, Reset} from "./counterAction";
 import "./Clicker.css";
 import hnusak from "./img/susak_hnusak.png";
 import Button from "react-bootstrap/esm/Button";
@@ -9,6 +9,7 @@ import Button from "react-bootstrap/esm/Button";
 const Clicker = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter);
+
 
   return (
     <div className="all">
@@ -35,6 +36,7 @@ const Clicker = () => {
           Reset
         </Button>
         <br></br>
+     
       </div>
     </div>
   );
